@@ -40,6 +40,7 @@ RUN \
   rm /tmp/changedetection.tar.gz && \
   pip3 install -U pip wheel setuptools && \
   pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ -r /app/changedetection/requirements.txt && \
+  pip3 install --target=/dependencies playwright~=1.27.1 && \
   apk del --purge \
     build-dependencies && \
   rm -rf \
